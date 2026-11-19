@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViralCut: stream highlights into Shorts</title>
+<meta name="description" content="ViralCut is a self-hosted tool that turns long live streams into captioned vertical Shorts and posts them to the owner's own YouTube channels.">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><a href="./"><img src="logo.svg" alt="ViralCut"></a>
+<nav><a class="on" href="./">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav></div></header>
+<main><div class="wrap">
+<h1>ViralCut turns long live streams into short vertical clips.</h1>
+<p class="lead">ViralCut is a self-hosted application. It finds the strongest moments in a stream recording, cuts them into 9:16 clips with captions, writes a title for each clip and, when its owner chooses, uploads the clip as a Short to a YouTube channel the owner manages.</p>
+
+<div class="card">
+<b>Who uses it.</b> ViralCut runs on its owner's own computer. It is operated by Somil Athole for two YouTube channels he owns and manages:
+<a href="https://www.youtube.com/@streamkaand">Stream Kaand</a> (Hindi streams, Indian audience) and
+<a href="https://www.youtube.com/@streamfrenzyus">Stream Frenzy</a> (English streams). It is not offered as a service to other people.
+</div>
+
+<h2>What it does</h2>
+<ol>
+<li>Records or downloads a public stream the owner chooses to clip.</li>
+<li>Transcribes the speech and finds moments where the audio and live chat spike.</li>
+<li>Cuts each moment into a vertical clip with burned-in captions.</li>
+<li>Writes a title, description and hashtags for each clip. The owner can edit or delete any clip before it is posted.</li>
+<li>Uploads chosen clips to the owner's own channel through the YouTube Data API, spaced out and capped per day.</li>
+</ol>
+
+<h2>How it uses YouTube API Services</h2>
+<table>
+<tr><th>Scope</th><th>Used for</th></tr>
+<tr><td><code>youtube.upload</code></td><td>Uploading a finished clip as a Short to the owner's channel (<code>videos.insert</code>).</td></tr>
+<tr><td><code>youtube.readonly</code></td><td>Reading the connected channel's name, and the view count of videos ViralCut itself uploaded (<code>videos.list</code>), so the owner can see which clips performed.</td></tr>
+</table>
+<p>ViralCut signs in with Google's own OAuth page; it never sees a password. The owner can disconnect a channel in ViralCut at any time, or revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+<h2>Policies</h2>
+<p>Use of ViralCut is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, our <a href="privacy.html">Privacy Policy</a> and our <a href="terms.html">Terms of Service</a>.</p>
+
+<h2>Contact</h2>
+<p>Somil Athole · <a href="mailto:sathole2001@gmail.com">sathole2001@gmail.com</a></p>
+</div></main>
+<footer><div class="wrap">ViralCut · operated by Somil Athole, India · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div></footer>
+</body>
+</html>
